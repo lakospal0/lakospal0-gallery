@@ -1,46 +1,112 @@
 body {
-    padding: 0;
-    margin: 0;
-    display: flex;
+    font-family: Roboto;
+}
+
+.wrapper {
     background: radial-gradient(ellipse at top, white, grey);
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    align-content: center;
+    flex-direction: column;
 }
 
 #container {
-    display: flex;
     background-color: white;
-    width: 70%;
-    height: 370px;
-    justify-content: center;
-    align-self: center;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.42);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.42);
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.42);
-}
-
-#arrowholderleft {
+    height: 394px;
+    width: 790px;
     display: flex;
-    order: 1;
-    width: 30px;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.42);
+    box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.42);
 }
 
 #picture {
-    display: inline-block;
-    justify-content: center;
-    overflow: hidden;
-    order: 2;
+    width: 700px;
+}
+
+.bigimage {
+    height: 100%;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.text-holder {
+    width: 94%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0% 3%;
+}
+
+.text-holder .title {
+    color: white;
+}
+
+.text-holder .description {
+    color: #939393;
 }
 
 #arrowholderright {
-    display: inline-block;
-    transform: rotate(180deg);
-    order: 3;
-    width: 30px;
+    width: 45px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    align-content: center;
+    transform: rotate(180deg);
+}
+
+#arrowholderleft {
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow:hover {
+    opacity: 0.7;
+}
+
+#thumbnails {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#thumbnails ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+#thumbnails li {
+    position: relative;
+}
+
+.thumbimage {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin: 0 5px;
+    border: 3.5px solid white;
+    -webkit-box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.23);
+}
+
+
+/* TODO active toggle */
+
+.thumbholder.active:before {
+    content: "";
+    border-style: solid;
+    border-width: 8px 10px 8px 0;
+    border-color: transparent white transparent transparent;
+    position: absolute;
+    left: 42%;
+    top: -16%;
+    transform: rotate(90deg);
 }

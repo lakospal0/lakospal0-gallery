@@ -1,5 +1,7 @@
 body {
     font-family: Roboto;
+    padding: 0;
+    margin: 0;
 }
 
 .wrapper {
@@ -95,10 +97,25 @@ body {
     -webkit-box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.23);
     -moz-box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.23);
     box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.23);
+    cursor: pointer;
+    transition: all ease 0.2s;
 }
 
+.tooltip {
+    position: absolute;
+    color: white;
+    background-color: black;
+    padding: 5px;
+    font-size: 11px;
+    width: 100%;
+    top: -33px;
+    left: -4px;
+    display: none;
+}
 
-/* TODO active toggle */
+.thumbimage:hover {
+    opacity: 0.7;
+}
 
 .thumbholder.active:before {
     content: "";
@@ -109,4 +126,15 @@ body {
     left: 42%;
     top: -16%;
     transform: rotate(90deg);
+}
+
+.tooltip:after {
+    content: "";
+    border-style: solid;
+    border-width: 8px 10px 8px 0;
+    border-color: transparent black transparent transparent;
+    position: absolute;
+    left: 42%;
+    top: 20px;
+    transform: rotate(270deg);
 }
